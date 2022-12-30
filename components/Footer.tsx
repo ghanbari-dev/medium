@@ -2,9 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
 
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <footer>
       <div className="bg-black lg:hidden">

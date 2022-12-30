@@ -1,15 +1,5 @@
 import Link from "next/link";
-
-type Props = {
-  id: number;
-  image: string;
-  name: string;
-  company?: string;
-  title: string;
-  date: string;
-  time: string;
-  memberOnly?: boolean;
-};
+import { postCartType } from "../types/postType";
 
 const TrendingCart = ({
   id,
@@ -20,7 +10,7 @@ const TrendingCart = ({
   date,
   time,
   memberOnly,
-}: Props) => {
+}: Omit<postCartType, "category">) => {
   return (
     <div className="flex space-x-4 basis-full md:basis-1/3 lg:basis-1/4 flex-grow">
       <div className="text-[#e6e6e6] text-3xl font-bold">

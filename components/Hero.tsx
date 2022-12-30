@@ -1,5 +1,3 @@
-type Props = {};
-
 const Hero = () => {
   const svg = `<svg
     xmlns="http://www.w3.org/2000/svg"

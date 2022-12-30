@@ -1,67 +1,15 @@
+import { useEffect, useState } from "react";
+import { postCartType } from "../types/postType";
 import TrendingCart from "./TrendingCart";
 
-type Props = {};
+const Trending = () => {
+  const [trends, setTrends] = useState<Omit<postCartType, "category">[]>([]);
 
-const Trending = (props: Props) => {
-  const data = [
-    {
-      id: 1,
-      image: "",
-      name: "Ted Bauer",
-      company: "",
-      title:
-        "University of Idaho Murders: Now It Looks Like John “Jack” Showalter, Right?",
-      date: "Dec 6",
-      time: "1",
-      memberOnly: true,
-    },
-    {
-      id: 2,
-      image: "",
-      name: "Tom Cooper",
-      company: "",
-      title: "Ukraine War, 14 December 2022",
-      date: "Dec 14",
-      time: "7",
-    },
-    {
-      id: 3,
-      image: "",
-      name: "Arthur Hayes",
-      company: "",
-      title: "PEMDAS",
-      date: "Dec 9",
-      time: "15",
-    },
-    {
-      id: 4,
-      image: "",
-      name: "Tom Whitwell",
-      company: "Magnetic Notes",
-      title: "52 things I learned in 2022",
-      date: "Dec 1",
-      time: "6",
-    },
-    {
-      id: 5,
-      image: "",
-      name: "Diana Malewicz",
-      company: "UX Collective",
-      title: "2023 visual design trends guide",
-      date: "Dec 12",
-      time: "7",
-      memberOnly: true,
-    },
-    {
-      id: 6,
-      image: "",
-      name: "Cassie Kozyrkov",
-      title: "Introducing ChatGPT!",
-      date: "Dec 8",
-      time: "6",
-      memberOnly: true,
-    },
-  ];
+  useEffect(() => {
+    fetch("http://localhost:4000/trends")
+      .then((res) => res.json())
+      .then((result) => setTrends(result));
+  }, []);
 
   return (
     <div className="border-b">
@@ -91,10 +39,10 @@ const Trending = (props: Props) => {
           <p className="text-xs font-bold">TRENDING ON MEDIUM</p>
         </div>
         <div className="flex flex-row flex-wrap gap-6">
-          {data.map((d) => (
+          {trends.map((trend) => (
             <TrendingCart
-              key={d.id}
-              {...d}
+              key={trend.id}
+              {...trend}
             />
           ))}
         </div>

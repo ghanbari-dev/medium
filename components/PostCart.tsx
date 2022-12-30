@@ -1,17 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
-type Props = {
-  id: number;
-  image: string;
-  name: string;
-  company?: string;
-  title: string;
-  date: string;
-  time: string;
-  memberOnly?: boolean;
-  category: string;
-};
+import { postCartType } from "../types/postType";
 
 const PostCart = ({
   id,
@@ -23,7 +12,7 @@ const PostCart = ({
   time,
   memberOnly,
   category
-}: Props) => {
+}: postCartType) => {
   return (
     <div className="flex gap-5 justify-between">
       <div className="flex-grow flex-shrink">
