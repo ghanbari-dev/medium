@@ -1,16 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
 import { postCartType } from "../types/postType";
 
 const TrendingCart = ({
   id,
-  image,
+  avatar,
   name,
   company,
   title,
   date,
   time,
   memberOnly,
-}: Omit<postCartType, "category">) => {
+}: Omit<postCartType, "category" | "image">) => {
   return (
     <div className="flex space-x-4 basis-full md:basis-1/3 lg:basis-1/4 flex-grow">
       <div className="text-[#e6e6e6] text-3xl font-bold">
@@ -18,7 +19,9 @@ const TrendingCart = ({
       </div>
       <div>
         <div className="text-[#414141] text-sm space-x-2 flex items-start">
-          <Link className="bg-black h-5 w-5 inline-block" href={"/"}></Link>
+          <Link className="h-5 w-5 inline-block" href={"/"}>
+            <Image src={avatar} alt="image" width={20} height={20} />
+          </Link>
           <div>
             <Link href={"/"}>{name}</Link>
             {company && (

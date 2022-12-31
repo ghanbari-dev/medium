@@ -1,5 +1,6 @@
 export interface postCartType {
   id: number;
+  avatar:string;
   image: string;
   name: string;
   company?: string;

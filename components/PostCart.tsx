@@ -1,23 +1,27 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { postCartType } from "../types/postType";
 
 const PostCart = ({
   id,
-  image,
+  avatar,
   name,
   company,
   title,
   date,
   time,
   memberOnly,
-  category
+  category,
+  image
 }: postCartType) => {
   return (
     <div className="flex gap-5 justify-between">
       <div className="flex-grow flex-shrink">
         <div className="text-[#414141] text-sm space-x-2 flex items-start">
-          <Link className="bg-black h-5 w-5 inline-block" href={"/"}></Link>
+          <Link className="h-5 w-5 inline-block" href={"/"}>
+            <Image src={avatar} alt="image" width={20} height={20} />
+          </Link>
           <div>
             <Link href={"/"}>{name}</Link>
             {company && (
@@ -36,7 +40,10 @@ const PostCart = ({
         <div className="text-[#757575] text-sm flex justify-between items-center mt-1 md:mt-2">
           <div>
             {date} . {time} min read .
-            <span className="px-2 py-[2px] border rounded-full text-[#757575] bg-[#f2f2f2] hover:text-[#292929] hover:bg-[#e6e6e6]">{category}</span> .
+            <span className="px-2 py-[2px] border rounded-full text-[#757575] bg-[#f2f2f2] hover:text-[#292929] hover:bg-[#e6e6e6]">
+              {category}
+            </span>{" "}
+            .
             {memberOnly && (
               <svg
                 className="inline-block"
@@ -62,7 +69,9 @@ const PostCart = ({
           </div>
         </div>
       </div>
-      <div className="w-[150px] h-[100px] md:w-[200px] md:h-[134px] bg-black flex-shrink-0"></div>
+      <div className="w-[150px] h-[100px] md:w-[200px] md:h-[134px] flex-shrink-0 relative">
+        <Image alt="img" src={image} fill object-fit="contain" />
+      </div>
     </div>
   );
 };

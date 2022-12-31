@@ -2,65 +2,71 @@
   "posts": [
     {
       "id": 1,
-      "image": "",
+      "avatar": "https://picsum.photos/20/20",
       "name": "Ted Bauer",
       "company": "",
       "title": "University of Idaho Murders: Now It Looks Like John “Jack” Showalter, Right?",
       "date": "Dec 6",
       "time": "1",
       "memberOnly": true,
-      "category": "data"
+      "category": "data",
+      "image": "https://picsum.photos/200/150"
     },
     {
       "id": 2,
-      "image": "",
+      "avatar": "https://picsum.photos/20/21",
       "name": "Tom Cooper",
       "company": "",
       "title": "Ukraine War, 14 December 2022",
       "date": "Dec 14",
       "time": "7",
-      "category": "data"
+      "category": "data",
+      "image": "https://picsum.photos/200/149"
     },
     {
       "id": 3,
-      "image": "",
+      "avatar": "https://picsum.photos/20/22",
       "name": "Arthur Hayes",
       "company": "",
       "title": "PEMDAS",
       "date": "Dec 9",
       "time": "15",
-      "category": "data"
+      "category": "data",
+      "image": "https://picsum.photos/200/148"
     },
     {
       "id": 4,
-      "image": "",
+      "avatar": "https://picsum.photos/21/20",
       "name": "Tom Whitwell",
       "company": "Magnetic Notes",
       "title": "52 things I learned in 2022",
       "date": "Dec 1",
       "time": "6",
-      "category": "data"
+      "category": "data",
+      "image": "https://picsum.photos/200/151"
     },
     {
       "id": 5,
-      "image": "",
+      "avatar": "https://picsum.photos/22/20",
       "name": "Diana Malewicz",
       "company": "UX Collective",
       "title": "2023 visual design trends guide",
       "date": "Dec 12",
       "time": "7",
       "memberOnly": true,
-      "category": "data"
+      "category": "data",
+      "image": "https://picsum.photos/200/155"
     },
     {
       "id": 6,
-      "image": "",
+      "avatar": "https://picsum.photos/23/20",
       "name": "Cassie Kozyrkov",
       "title": "Introducing ChatGPT!",
       "date": "Dec 8",
       "time": "6",
       "memberOnly": true,
-      "category": "data"
+      "category": "data",
+      "image": "https://picsum.photos/200/153"
     }
   ],
   "comments": [],
@@ -78,7 +84,7 @@
   "trends": [
     {
       "id": 1,
-      "image": "",
+      "avatar": "https://picsum.photos/20/20",
       "name": "Ted Bauer",
       "company": "",
       "title": "University of Idaho Murders: Now It Looks Like John “Jack” Showalter, Right?",
@@ -88,7 +94,7 @@
     },
     {
       "id": 2,
-      "image": "",
+      "avatar": "https://picsum.photos/20/21",
       "name": "Tom Cooper",
       "company": "",
       "title": "Ukraine War, 14 December 2022",
@@ -97,7 +103,7 @@
     },
     {
       "id": 3,
-      "image": "",
+      "avatar": "https://picsum.photos/20/22",
       "name": "Arthur Hayes",
       "company": "",
       "title": "PEMDAS",
@@ -106,7 +112,7 @@
     },
     {
       "id": 4,
-      "image": "",
+      "avatar": "https://picsum.photos/21/20",
       "name": "Tom Whitwell",
       "company": "Magnetic Notes",
       "title": "52 things I learned in 2022",
@@ -115,7 +121,7 @@
     },
     {
       "id": 5,
-      "image": "",
+      "avatar": "https://picsum.photos/22/20",
       "name": "Diana Malewicz",
       "company": "UX Collective",
       "title": "2023 visual design trends guide",
@@ -125,7 +131,7 @@
     },
     {
       "id": 6,
-      "image": "",
+      "avatar": "https://picsum.photos/23/20",
       "name": "Cassie Kozyrkov",
       "title": "Introducing ChatGPT!",
       "date": "Dec 8",
